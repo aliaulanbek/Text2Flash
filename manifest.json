@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name" : "Highlight to Flashcard",
+    "description": "Creates a flashcard based on highlighted information",
+    "version" : "1.0",
+    "author" : "Alia Ulanbek Kyzy",
+    "permissions" : [
+        "activeTab",
+        "storage",
+        "scripting",
+        "contextMenus"
+    ],
+    "background" : {
+        "service_worker": "background.js"
+    },
+    "action" :{
+        "default_popup" : "src/popup.html",
+        "default_title" : "Text2Flash",
+        "default_icon": {
+            "16": "/images/16px.png",
+            "48": "/images/48px.png",
+            "128": "/images/128px.png"
+        }
+    },
+    "content_scripts" : [
+        {
+        "matches" : ["<all_urls>"],
+        "js" : ["content.js"]
+        }
+    ],
+    "icons": {
+        "16": "/images/16px.png",
+        "48": "/images/48px.png",
+        "128": "/images/128px.png"
+    },
+    "web_accessible_resources": [
+        {
+          "resources": ["images/48px.png"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+}
