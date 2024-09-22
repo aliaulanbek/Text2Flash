@@ -51,5 +51,24 @@ function removeIcon() {
 function createFlashcard(text) {
     console.log("Text: ", text);
 
-    fetch(chrome.runtime.getURL("src/flashcard.html"))
+    // let container = document.getElementById('flashcard');
+    // if (!container){
+    //     container = document.createElement('div');
+    //     container.id = "flashcard";
+    //     // container.style.posiiton = "fixed";
+    //     // container.style.top = '0';
+    //     // container.style.left = '0';
+    //     // container.style.width = '100vw';
+    //     // container.style.height = '100vh';
+    //     // container.style.zIndex = '9999'; // Ensure it shows above all content
+    //     document.body.appendChild(container);
+    // }
+    // window.postMessage( {type: "SHOW_FLASHCARD", text}, "*")
 } 
+
+// window.addEventListener("message", function(event) {
+//     if (event.source !== window) return;
+//     if (event.data.type === "SHOW_FLASHCARD") {
+//         renderFlashcard(event.data.text);
+//     }
+// });

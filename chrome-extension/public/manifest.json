@@ -11,10 +11,10 @@
         "contextMenus"
     ],
     "background" : {
-        "service_worker": "/src/background.js"
+        "service_worker": "background.js"
     },
     "action" :{
-        "default_popup" : "/src/popup.html",
+        "default_popup" : "popup.html",
         "default_title" : "Text2Flash",
         "default_icon": {
             "16": "/images/16px.png",
@@ -25,7 +25,7 @@
     "content_scripts" : [
         {
         "matches" : ["<all_urls>"],
-        "js" : ["/src/content.js"]
+        "js" : ["content.js"]
         }
     ],
     "icons": {
@@ -35,7 +35,7 @@
     },
     "web_accessible_resources": [
         {
-          "resources": ["images/48px.png"],
+          "resources": ["images/48px.png", "chrome-extension/src/flashcard.html"],
           "matches": ["<all_urls>"]
         }
       ]
