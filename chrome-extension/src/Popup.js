@@ -1,16 +1,13 @@
 /* global chrome */
 import React, { useEffect, useState } from 'react';
 function App() {
-  const [word, setWord] = useState('');
+  const [text, setText] = useState('');
 
-  console.log("wait");
+
   useEffect(() => {
     chrome.runtime.sendMessage( {action: "get text"}, (text) => {
-      setWord(text)
+      setText(text)
     })
-      // chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-      //   setWord(request.text)
-      // })
   }, []);
 
   return <h3>{word}</h3>;
