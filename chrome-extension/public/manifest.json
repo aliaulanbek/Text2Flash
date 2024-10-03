@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name" : "Highlight to Flashcard",
+    "name" : "Text2Flash",
     "description": "Creates a flashcard based on highlighted information",
     "version" : "1.0",
     "author" : "Alia Ulanbek Kyzy",
@@ -14,7 +14,7 @@
         "service_worker": "background.js"
     },
     "action" :{
-        "default_popup" : "popup.html",
+        "default_popup" : "index.html",
         "default_title" : "Text2Flash",
         "default_icon": {
             "16": "/images/16px.png",

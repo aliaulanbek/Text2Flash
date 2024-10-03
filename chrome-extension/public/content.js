@@ -34,6 +34,7 @@ document.addEventListener('mouseup', (event) => {
     }
 });
 
+
 document.addEventListener('mousedown', (event) => {
     if (iconElement && event.target !== iconElement) {
         removeIcon();
@@ -49,7 +50,9 @@ function removeIcon() {
 }
 
 function createFlashcard(text) {
-    console.log("Text: ", text);
+    chrome.runtime.sendMessage( {action: "send text", text: text});
+    
+    // console.log("Text: ", text);
 
     // let container = document.getElementById('flashcard');
     // if (!container){
