@@ -1,5 +1,8 @@
 /* global chrome */
 import React, { useEffect, useState } from 'react';
+import Flashcard from './Components/Flashcard';
+import "./Popup.css"
+
 function App() {
   const [text, setText] = useState('');
 
@@ -10,7 +13,14 @@ function App() {
     })
   }, []);
 
-  return <h3>{word}</h3>;
+  return (
+    <>
+    <div className='popup'>
+      <Flashcard text = {text} onChange = {setText} />
+    </div>
+    </>
+
+  );
 }
 
 export default App;
