@@ -15,9 +15,9 @@ function App() {
 
   return (
     <>
-    <div className='popup'>
-      <Flashcard text = {text} onChange = {setText} />
-    </div>
+      <div className='popup'>
+        <Flashcard text = {text} onChange = {setText} />
+      </div>
     </>
 
   );

@@ -26,7 +26,7 @@ export default function Flashcard( props ) {
     <>
         <div className='flashcard' ref={flashCardRef}>
             <div className='titleDiv'>
-                <h3 className='title'>New Flashcard</h3>
+                <h3 className='title'>Flashcard</h3>
             </div>
             <div className='card front'>
                 <label className='label front'>Term</label>
